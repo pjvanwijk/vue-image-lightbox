@@ -70,7 +70,6 @@
   margin: 0;
   max-height: calc(100% - 65px);
   width: 100%;
-  text-align: center;
   padding: 10px;
   overflow: auto;
 }
@@ -248,6 +247,10 @@ img.vue-lb-modal-image {
   right: 0;
   text-align: center;
   top: auto;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @media (min-width: 500px) {
