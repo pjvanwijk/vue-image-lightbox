@@ -3,6 +3,11 @@ const images = [
     thumb: 'https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg',
     src: 'https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg',
     caption: '<h4>Elephant</h4>',
+    details: {
+      description: 'The population of elephants is thinning out due to overhunting on their ivory.',
+      photographer: 'Anonymous',
+      location: 'Pride rock'
+    }
   },
   {
     thumb: 'https://i-kinhdoanh.vnecdn.net/2018/06/18/1-1529296929_680x0.jpg',

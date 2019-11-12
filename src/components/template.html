@@ -43,8 +43,8 @@
 
         <slot name="customCaption">
           <div
-            @click="showOverlay = !showOverlay"
-            class="vue-lb-info"
+            @click="toggleOverlay"
+            :class="[{'vue-lb-info': true}, {'pointer': hasOverlay}]"
             v-html="images[select].caption"
             v-show="showCaption"
           ></div>
@@ -62,11 +62,18 @@
           </div> 
         </div>
 
-        <transition name="fade">
+        <transition name="fade">    
           <div class="vue-lb-overlay"
-            v-show="showOverlay">
-          </div> 
+            v-show="overlayOn">
+            <slot name="overlay"
+              :caption="images[select].caption"
+              :details="images[select].details"
+              :imagesrc="images[select].src"
+            >
+            </slot>
+          </div>
         </transition>
+
       </div> <!-- .vue-lb-figure -->
     </div> <!-- .vue-lb-content -->
     <div class="vue-lb-thumbnail-wrapper">
