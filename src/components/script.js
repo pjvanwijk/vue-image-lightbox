@@ -93,6 +93,11 @@ export default {
       type: String,
       default: 'Next'
     },
+
+    showOverlay: {
+      type: Boolean,
+      default: true
+    }
   },
 
   data() {

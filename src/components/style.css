@@ -61,6 +61,20 @@
   width: 40px;
 }
 
+.vue-lb-overlay {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  display: block;
+  bottom: 65px;
+  margin: 0;
+  max-height: calc(100% - 65px);
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  overflow: auto;
+}
+
 .vue-lb-figure {
   margin: 0px;
   display: block;

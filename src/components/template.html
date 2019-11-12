@@ -43,6 +43,7 @@
 
         <slot name="customCaption">
           <div
+            @click="showOverlay = !showOverlay"
             class="vue-lb-info"
             v-html="images[select].caption"
             v-show="showCaption"
@@ -59,9 +60,14 @@
               {{ select + 1 }} / {{ images.length }}
             </slot>
           </div> 
-        </div> 
+        </div>
 
-      </div> 
+        <transition name="fade">
+          <div class="vue-lb-overlay"
+            v-show="showOverlay">
+          </div> 
+        </transition>
+      </div> <!-- .vue-lb-figure -->
     </div> <!-- .vue-lb-content -->
     <div class="vue-lb-thumbnail-wrapper">
     <div v-if="showThumbs" class="vue-lb-thumbnail">
