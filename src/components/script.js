@@ -94,9 +94,9 @@ export default {
       default: 'Next'
     },
 
-    showOverlay: {
+    hasOverlay: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
 
@@ -105,6 +105,7 @@ export default {
       select: this.startAt,
       lightBoxOn: this.showLightBox,
       timer: null,
+      overlayOn: this.showOverlay,
     }
   },
 
@@ -237,6 +238,13 @@ export default {
     previousImage() {
       this.$set(this, 'select', (this.select + this.images.length - 1) % this.images.length)
     },
+
+    toggleOverlay() {
+      if (this.hasOverlay) {
+        this.overlayOn = !this.overlayOn
+        this.$emit('onOverlayOpened', this.overlayOn)
+      }
+    }
   },
 
   beforeDestroy() {
