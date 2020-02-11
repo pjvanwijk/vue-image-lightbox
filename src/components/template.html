@@ -6,7 +6,10 @@
     ref="container"
   >
     <div class="vue-lb-content">
-      <div class="vue-lb-header">
+      <div 
+        class="vue-lb-header"
+        v-if="hasHeader"
+      >
         <span></span>
         <button 
         type="button" 

@@ -19,6 +19,7 @@
         :show-caption="true"
         :show-light-box="false"
         :has-overlay="true"
+        :has-header="false"
       >
         <template v-slot:overlay="overlayProps">
           <div v-html="overlayProps.caption ? overlayProps.caption : '<h1>untitled image<h1>'"></div>

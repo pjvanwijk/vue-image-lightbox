@@ -29,6 +29,11 @@ export default {
       default: true,
     },
 
+    hasHeader: {
+      type: Boolean,
+      default: true,
+    },
+
     startAt: {
       type: Number,
       default: 0,
